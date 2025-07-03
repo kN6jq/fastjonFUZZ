@@ -1,6 +1,7 @@
 # FastJSON依赖FUZZ工具
 
-一个用于检测FastJSON漏洞的图形化工具，可以自动测试各种Java类的反序列化漏洞。
+一个用于检测FastJSON依赖的图形化工具，可以自动测试各种Java依赖类是否存在。
+
 
 ## 功能特点
 
@@ -51,7 +52,7 @@ java -jar fastjonFUZZ-1.0-SNAPSHOT-jar-with-dependencies.jar
 ### 使用步骤
 
 1. 配置测试参数：
-   - 目标URL：输入要测试的目标URL（例如：`http://142.171.65.181/login`）
+   - 目标URL：输入要测试的目标URL（例如：`http://127.0.0.1/login`）
    - FUZZ位置：在HTTP请求数据包中标记要插入payload的位置（默认为"FUZZ"）
    - 请求方法：选择GET或POST
    - 漏洞特征：输入漏洞特征字符串（默认为"can not cast to char"）
@@ -72,7 +73,7 @@ java -jar fastjonFUZZ-1.0-SNAPSHOT-jar-with-dependencies.jar
      Content-Type: application/json
      Cache-Control: no-cache
      Pragma: no-cache
-     Host: 142.171.65.181
+     Host: 127.0.0.1
      Connection: keep-alive
      
      FUZZ
